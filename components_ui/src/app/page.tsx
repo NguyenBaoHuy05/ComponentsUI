@@ -1,5 +1,5 @@
 "use client";
-import { Github, Star } from "lucide-react";
+import { Github, Link, Star } from "lucide-react";
 import React, { useEffect } from "react";
 import ProfileCard from "@/components/ProfileCard";
 import ProfileStatsCard from "@/components/ProfileStatsCard";
@@ -56,70 +56,76 @@ export default function Home() {
   }, []);
   console.log("Star count:", starGithub);
   return (
-    <main className="flex flex-col items-center justify-between min-h-screen overflow-x-hidden">
-      <header className="fixed text-3xl font-bold h-[80px] w-full bg-black opacity-90 text-white flex items-center px-4 z-10">
-        <span>ComponentsUI</span>
-        <div className="ml-auto flex">
-          <Github className="w-12 h-12" />
-          <div className="hidden md:flex relative items-center ml-2 gap-2 rounded-lg overflow-hidden">
-            <div className="absolute w-[500px] h-[500px] -z-10 rounded-lg bg-gradient-to-l from-red-500 to-yellow-500  animate-spin"></div>
-            <div className=" flex items-center translate-x-[3px] w-[90%] h-[90%] rounded-lg  bg-black z-20">
-              <span className="text-white mx-2 text-3xl  ">{starGithub}</span>
-              <Star className="w-10 h-10 text-yellow-500 mr-2" />
+    <>
+      <main className="flex flex-col items-center justify-between min-h-screen overflow-x-hidden">
+        <header className="fixed text-3xl font-bold h-[80px] w-full bg-black opacity-90 text-white flex items-center px-4 z-10">
+          <span>ComponentsUI</span>
+          <div className="ml-auto flex">
+            <Link href="https://github.com/NguyenBaoHuy05/ComponentsUI">
+              <Github className="w-12 h-12" />
+            </Link>
+            <div className="hidden md:flex relative items-center ml-2 gap-2 rounded-lg overflow-hidden">
+              <div className="absolute w-[500px] h-[500px] -z-10 rounded-lg bg-gradient-to-l from-red-500 to-yellow-500  animate-spin"></div>
+              <div className=" flex items-center translate-x-[3px] w-[90%] h-[90%] rounded-lg  bg-black z-20">
+                <span className="text-white mx-2 text-3xl  ">{starGithub}</span>
+                <Star className="w-10 h-10 text-yellow-500 mr-2" />
+              </div>
             </div>
           </div>
-        </div>
-      </header>
-      <div className="mt-[80px] font-sans grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full pb-10 py-3 gap-10 h-fit px-10">
-        <div className=" flex flex-col h-fit">
-          {col1Components.map((com, index) => (
-            <Components
-              key={index}
-              onViewCode={() => handleViewCode(com.name)}
-              type={com.name}
-            >
-              <com.component />
-            </Components>
-          ))}
-        </div>
+        </header>
+        <div className="mt-[80px] font-sans grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full pb-10 py-3 gap-10 h-fit px-10">
+          <div className=" flex flex-col h-fit">
+            {col1Components.map((com, index) => (
+              <Components
+                key={index}
+                onViewCode={() => handleViewCode(com.name)}
+                type={com.name}
+              >
+                <com.component />
+              </Components>
+            ))}
+          </div>
 
-        <div className="flex flex-col h-fit">
-          {col2Components.map((com, index) => (
-            <Components
-              key={index}
-              onViewCode={() => handleViewCode(com.name)}
-              type={com.name}
-            >
-              <com.component />
-            </Components>
-          ))}
-        </div>
+          <div className="flex flex-col h-fit">
+            {col2Components.map((com, index) => (
+              <Components
+                key={index}
+                onViewCode={() => handleViewCode(com.name)}
+                type={com.name}
+              >
+                <com.component />
+              </Components>
+            ))}
+          </div>
 
-        <div className="flex flex-col h-fit">
-          {col3Components.map((com, index) => (
-            <Components
-              key={index}
-              onViewCode={() => handleViewCode(com.name)}
-              type={com.name}
-            >
-              <com.component />
-            </Components>
-          ))}
-        </div>
+          <div className="flex flex-col h-fit">
+            {col3Components.map((com, index) => (
+              <Components
+                key={index}
+                onViewCode={() => handleViewCode(com.name)}
+                type={com.name}
+              >
+                <com.component />
+              </Components>
+            ))}
+          </div>
 
-        <div className="flex flex-col h-fit">
-          {col4Components.map((com, index) => (
-            <Components
-              key={index}
-              onViewCode={() => handleViewCode(com.name)}
-              type={com.name}
-            >
-              <com.component />
-            </Components>
-          ))}
+          <div className="flex flex-col h-fit">
+            {col4Components.map((com, index) => (
+              <Components
+                key={index}
+                onViewCode={() => handleViewCode(com.name)}
+                type={com.name}
+              >
+                <com.component />
+              </Components>
+            ))}
+          </div>
+          {viewCode && (
+            <ViewCode componentName={viewCode} onClose={handleClose} />
+          )}
         </div>
-      </div>
-      {viewCode && <ViewCode componentName={viewCode} onClose={handleClose} />}
-    </main>
+      </main>
+    </>
   );
 }
