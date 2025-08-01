@@ -5,7 +5,7 @@ import ProfileStatsCard from "@/components/ProfileStatsCard";
 import TeamMemberCard from "@/components/TeamMemberCard";
 import ProfileBadgeCard from "@/components/ProfileBadgeCard";
 import CompactProfileCard from "@/components/CompactProfileCard";
-import ViewCode from "@/components/ViewCode";
+import ViewCode from "@/Other/ViewCode";
 import Components from "@/components/Components";
 import React from "react";
 

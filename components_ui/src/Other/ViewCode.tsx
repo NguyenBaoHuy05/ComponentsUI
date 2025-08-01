@@ -24,7 +24,12 @@ export default function ViewCode({
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
+    // Vô hiệu hóa scrollbar ngoài khi modal hiển thị
+    document.body.style.overflow = "hidden";
     loadComponent(componentName).then(setCode);
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [componentName]);
 
   const handleCopy = () => {
@@ -40,11 +45,24 @@ export default function ViewCode({
 
   return (
     <div className="absolute inset-0 bg-black opacity-90 z-0 flex items-center justify-center">
-      <div className="relative border-2 border-dashed border-gray-300 rounded-md p-4 z-10 w-[800px] h-[500px] bg-white">
-        <pre className="text-sm text-white bg-black p-4 rounded-md overflow-auto ">
+      <div className="custom-scrollbar relative border-2 border-dashed border-gray-300 rounded-md p-1 w-[800px] h-[500px] bg-white overflow-auto">
+        <style>{`
+          .custom-scrollbar::-webkit-scrollbar {
+            width: 6px; /* dọc */
+            height: 6px; /* ngang */
+          }
+          .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+          }
+          .custom-scrollbar::-webkit-scrollbar-track {
+            background: #222;
+          }
+        `}</style>
+        <pre className="custom-scrollbar text-sm text-white bg-black p-4 rounded-md overflow-auto">
           <code>{code}</code>
         </pre>
-        <div className="absolute top-5 right-5 flex space-x-2">
+        <div className="absolute top-3 right-3 flex space-x-2">
           <button
             className="text-white hover:text-gray-400 hover:cursor-pointer"
             onClick={handleCopy}
