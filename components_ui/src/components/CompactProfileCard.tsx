@@ -1,3 +1,5 @@
+import { Button } from "./Button";
+
 export default function CompactProfileCard() {
   return (
     <div className="max-w-sm border-2 rounded-2xl shadow-lg ">
@@ -12,9 +14,9 @@ export default function CompactProfileCard() {
               <p className="text-sm text-gray-600">Designer</p>
             </div>
           </div>
-          <button className="bg-blue-500 text-white rounded-lg text-[12px] px-2 py-1">
+          <Button className="bg-blue-500 text-white rounded-lg text-[12px] px-2 py-1">
             Follow
-          </button>
+          </Button>
         </div>
       </div>
     </div>
