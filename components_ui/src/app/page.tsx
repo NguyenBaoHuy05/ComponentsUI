@@ -1,5 +1,7 @@
 "use client";
-import { Github, Link, Star } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import { Github, Star } from "lucide-react";
 import React, { useEffect } from "react";
 import ProfileCard from "@/components/ProfileCard";
 import ProfileStatsCard from "@/components/ProfileStatsCard";
@@ -12,23 +14,37 @@ import ProfileCoverCard from "@/components/ProfileCoverCard";
 import ProfileSkillsCard from "@/components/ProfileSkillsCard";
 import ProfileRatingCard from "@/components/ProfileRatingCard";
 import ProfileContactCard from "@/components/ProfileContactCard";
+import ProfileProgressCard from "@/components/ProfileProgressCard";
+import ProductCard from "@/components/ProductCard";
+import ProductRatingCard from "@/components/ProductRatingCard";
+import ProductBadgeCard from "@/components/ProductBadgeCard";
+import ProductVariantsCard from "@/components/ProductVariantsCard";
+import ProductQuickActionsCard from "@/components/ProductQuickActionsCard";
+import ProductStockCard from "@/components/ProductStockCard";
 
 const col1Components = [
   { name: "ProfileCard", component: ProfileCard },
   { name: "ProfileCoverCard", component: ProfileCoverCard },
+  { name: "ProfileProgressCard", component: ProfileProgressCard },
+  { name: "ProductBadgeCard", component: ProductBadgeCard },
 ];
 const col2Components = [
   { name: "ProfileStatsCard", component: ProfileStatsCard },
   { name: "TeamMemberCard", component: TeamMemberCard },
+  { name: "ProductRatingCard", component: ProductRatingCard },
+  { name: "ProductStockCard", component: ProductStockCard },
 ];
 const col3Components = [
   { name: "ProfileBadgeCard", component: ProfileBadgeCard },
   { name: "ProfileRatingCard", component: ProfileRatingCard },
+  { name: "ProductCard", component: ProductCard },
+  { name: "ProductQuickActionsCard", component: ProductQuickActionsCard },
 ];
 const col4Components = [
   { name: "CompactProfileCard", component: CompactProfileCard },
   { name: "ProfileSkillsCard", component: ProfileSkillsCard },
   { name: "ProfileContactCard", component: ProfileContactCard },
+  { name: "ProductVariantsCard", component: ProductVariantsCard },
 ];
 
 export default function Home() {
@@ -64,6 +80,7 @@ export default function Home() {
             <Link href="https://github.com/NguyenBaoHuy05/ComponentsUI">
               <Github className="w-12 h-12" />
             </Link>
+
             <div className="hidden md:flex relative items-center ml-2 gap-2 rounded-lg overflow-hidden">
               <div className="absolute w-[500px] h-[500px] -z-10 rounded-lg bg-gradient-to-l from-red-500 to-yellow-500  animate-spin"></div>
               <div className=" flex items-center translate-x-[3px] w-[90%] h-[90%] rounded-lg  bg-black z-20">
@@ -125,6 +142,10 @@ export default function Home() {
             <ViewCode componentName={viewCode} onClose={handleClose} />
           )}
         </div>
+        <footer className="w-full h-16 bg-black text-white flex items-center justify-center">
+          <Image src="/favicon.png" alt="Footer Image" width={50} height={50} />
+          <span className="ml-2">Made with ❤️ by Team&#39;s Huy</span>
+        </footer>
       </main>
     </>
   );
