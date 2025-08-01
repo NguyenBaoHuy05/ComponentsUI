@@ -45,11 +45,11 @@ export default function ViewCode({
 
   return (
     <div className="absolute inset-0 bg-black opacity-90 z-0 flex items-center justify-center">
-      <div className="custom-scrollbar relative border-2 border-dashed border-gray-300 rounded-md p-1 w-[800px] h-[500px] bg-white overflow-auto">
+      <div className="custom-scrollbar relative border-2 border-dashed border-gray-300 rounded-md p-1 w-[800px] max-h-[500px] bg-white overflow-auto">
         <style>{`
           .custom-scrollbar::-webkit-scrollbar {
-            width: 6px; /* dọc */
-            height: 6px; /* ngang */
+            width: 8px; /* dọc */
+            height: 8px; /* ngang */
           }
           .custom-scrollbar::-webkit-scrollbar-thumb {
             background: #888;

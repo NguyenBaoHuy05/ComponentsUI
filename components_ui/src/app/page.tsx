@@ -7,7 +7,8 @@ import ProfileBadgeCard from "@/components/ProfileBadgeCard";
 import CompactProfileCard from "@/components/CompactProfileCard";
 import ViewCode from "@/Other/ViewCode";
 import Components from "@/components/Components";
-import React from "react";
+import { Github, Star } from "lucide-react";
+import React, { useEffect } from "react";
 
 export default function Home() {
   const [viewCode, setViewCode] = React.useState<string | null>(null);
@@ -17,12 +18,38 @@ export default function Home() {
   const handleViewCode = (componentName: string) => {
     setViewCode(componentName);
   };
+  const [starGithub, setStarGithub] = React.useState(0);
+  useEffect(() => {
+    try {
+      async function fetchData() {
+        const res = await fetch(
+          "https://api.github.com/repos/NguyenBaoHuy05/ComponentsUI"
+        );
+        const data = await res.json();
+        setStarGithub(data.stargazers_count);
+      }
+      fetchData();
+    } catch (error) {
+      console.error("Error fetching GitHub stars:", error);
+    }
+  }, []);
+  console.log("Star count:", starGithub);
   return (
-    <div className="flex flex-col items-center justify-between min-h-screen overflow-x-hidden">
-      <div className="sticky text-3xl font-bold h-[80px] w-full bg-black opacity-90 text-white flex items-center ml-10 z-10">
-        ComponentsUI
-      </div>
-      <div className="font-sans grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full pb-10 py-3 gap-10 h-fit px-10">
+    <main className="flex flex-col items-center justify-between min-h-screen overflow-x-hidden">
+      <header className="fixed text-3xl font-bold h-[80px] w-full bg-black opacity-90 text-white flex items-center px-4 z-10">
+        <span>ComponentsUI</span>
+        <div className="ml-auto flex">
+          <Github className="w-12 h-12" />
+          <div className="flex relative items-center ml-2 gap-2 rounded-lg overflow-hidden">
+            <div className="absolute w-[500px] h-[500px] -z-10 rounded-lg bg-gradient-to-l from-red-500 to-yellow-500  animate-spin"></div>
+            <div className=" flex items-center translate-x-[3px] w-[90%] h-[90%] rounded-lg  bg-black z-20">
+              <span className="text-white mx-2 text-3xl  ">{starGithub}</span>
+              <Star className="w-10 h-10 text-yellow-500 mr-2" />
+            </div>
+          </div>
+        </div>
+      </header>
+      <div className="mt-[80px] font-sans grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full pb-10 py-3 gap-10 h-fit px-10">
         <div className=" flex flex-col h-fit">
           <Components
             onViewCode={() => handleViewCode("ProfileCard")}
@@ -72,6 +99,6 @@ export default function Home() {
         </div>
       </div>
       {viewCode && <ViewCode componentName={viewCode} onClose={handleClose} />}
-    </div>
+    </main>
   );
 }
