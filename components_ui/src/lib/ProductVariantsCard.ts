@@ -1,7 +1,7 @@
 const ProductVariantsCard = `import { Button } from "./Button";
 export default function ProductVariantsCard() {
   return (
-    <div className="max-w-sm overflow-hidden">
+    <div className="max-w-sm overflow-hidden border border-gray-300 rounded-lg shadow-lg">
       <div className="h-48 bg-gray-200 flex items-center justify-center">
         <span className="text-gray-500">T-Shirt Image</span>
       </div>
@@ -43,5 +43,6 @@ export default function ProductVariantsCard() {
       </div>
     </div>
   );
-}`;
+}
+`;
 export default ProductVariantsCard;

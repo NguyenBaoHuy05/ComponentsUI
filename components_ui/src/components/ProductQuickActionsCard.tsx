@@ -1,7 +1,7 @@
 import { Button } from "./Button";
 export default function ProductQuickActionsCard() {
   return (
-    <div className="max-w-sm overflow-hidden relative group">
+    <div className="max-w-sm overflow-hidden relative group border border-gray-300 rounded-lg shadow-lg">
       <div className="absolute top-2 right-2 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
         <div className="flex flex-col space-y-2">
           <Button className="flex justify-center items-center w-8 h-8 p-0 bg-white rounded-full shadow-md">

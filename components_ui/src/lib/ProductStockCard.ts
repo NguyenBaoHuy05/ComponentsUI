@@ -2,7 +2,7 @@ const ProductStockCard = `import { Button } from "./Button";
 import { ProgressBar } from "./ProgressBar";
 export default function ProductStockCard() {
   return (
-    <div className="max-w-sm overflow-hidden border rounded-lg shadow-lg ">
+    <div className="max-w-sm overflow-hidden border border-red-500 rounded-lg shadow-lg ">
       <div className="h-48 bg-gray-200 flex items-center justify-center">
         <span className="text-gray-500">Tablet Image</span>
       </div>
@@ -26,5 +26,6 @@ export default function ProductStockCard() {
     </div>
   );
 }
+
 `;
 export default ProductStockCard;
