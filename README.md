@@ -1,4 +1,5 @@
 # ComponentsUI (version 0.0.1)
-I'm just an undergraduate student. I hope this open project is accessible to everyone who is starting with UI development in Next.js.
+I'm just an undergraduate student, but I'm really passionate about UI because it's so engaging. I hope this open project is accessible to everyone who's starting out with UI development in Next.js, just like me.
 
 Link demo: [ComponentsUI](https://components-ui-sigma.vercel.app/)
+Version 0.0.1: 16 components (08/2025)
