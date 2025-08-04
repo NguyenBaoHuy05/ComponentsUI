@@ -38,6 +38,11 @@ import ComparisonStatsCard from "@/components/ComparisonStatsCard";
 import CircularProgressStats from "@/components/CircularProgressStats";
 import KPIDashboardCard from "@/components/KPIDashboardCard";
 import TimeBasedStatsCard from "@/components/TimeBasedStatsCard";
+import GeographicStatsCard from "@/components/GeographicStatsCard";
+import RealTimeStatsCard from "@/components/RealTimeStatsCard";
+import LeaderboardStatsCard from "@/components/LeaderboardStatsCard";
+import HealthScoreStatsCard from "@/components/HealthScoreStatsCard";
+import ForecastStatsCard from "@/components/ForecastStatsCard";
 
 const col1Components = [
   { name: "ProfileCard", component: ProfileCard },
@@ -48,6 +53,8 @@ const col1Components = [
   { name: "ProductTimerCard", component: ProductTimerCard },
   { name: "ProductWarrantyCard", component: ProductWarrantyCard },
   { name: "ComparisonStatsCard", component: ComparisonStatsCard },
+  { name: "GeographicStatsCard", component: GeographicStatsCard },
+  { name: "ForecastStatsCard", component: ForecastStatsCard },
 ];
 const col2Components = [
   { name: "ProfileStatsCard", component: ProfileStatsCard },
@@ -58,6 +65,7 @@ const col2Components = [
   { name: "ProductComparisonCard", component: ProductComparisonCard },
   { name: "ProgressStatsCard", component: ProgressStatsCard },
   { name: "KPIDashboardCard", component: KPIDashboardCard },
+  { name: "RealTimeStatsCard", component: RealTimeStatsCard },
 ];
 const col3Components = [
   { name: "ProfileBadgeCard", component: ProfileBadgeCard },
@@ -68,6 +76,7 @@ const col3Components = [
   { name: "ProductSubscriptionCard", component: ProductSubscriptionCard },
   { name: "RevenueStatsCard", component: RevenueStatsCard },
   { name: "CircularProgressStats", component: CircularProgressStats },
+  { name: "LeaderboardStatsCard", component: LeaderboardStatsCard },
 ];
 const col4Components = [
   { name: "CompactProfileCard", component: CompactProfileCard },
@@ -79,6 +88,7 @@ const col4Components = [
   { name: "StatsCard", component: StatsCard },
   { name: "MultiMetricStatsCard", component: MultiMetricStatsCard },
   { name: "TimeBasedStatsCard", component: TimeBasedStatsCard },
+  { name: "HealthScoreStatsCard", component: HealthScoreStatsCard },
 ];
 
 export default function Home() {

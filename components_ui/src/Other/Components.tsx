@@ -12,7 +12,7 @@ export default function Components({
   onViewCode: () => void;
 }) {
   return (
-    <div className="flex flex-col border-1 border-gray-800 rounded-md h-fit mb-4">
+    <div className="flex flex-col border-1 border-gray-800 rounded-md h-fit mb-10">
       <div className="flex border-b border-gray-800 w-full p-2">
         <span className=" bg-gray-900 hover:bg-gray-800 px-1 rounded-md">
           {AddSpace(type).charAt(0).toUpperCase() + AddSpace(type).slice(1)}

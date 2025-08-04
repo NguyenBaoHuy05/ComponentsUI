@@ -45,7 +45,7 @@ export default function ViewCode({
 
   return (
     <div className="fixed inset-0 bg-black opacity-90 z-50 flex items-center justify-center">
-      <div className="custom-scrollbar relative border-2 border-dashed border-gray-300 rounded-md p-1 w-[800px] max-h-[500px] bg-white overflow-auto">
+      <div className="custom-scrollbar relative border-2 border-gray-300 rounded-md p-1 w-[800px] max-h-[500px] bg-white overflow-auto">
         <style>{`
           .custom-scrollbar::-webkit-scrollbar {
             width: 8px; /* dọc */
@@ -59,7 +59,7 @@ export default function ViewCode({
             background: #222;
           }
         `}</style>
-        <pre className="custom-scrollbar text-sm text-white bg-black p-4 rounded-md overflow-auto">
+        <pre className="custom-scrollbar text-sm text-white bg-gray-800 p-4 rounded-md overflow-auto">
           <code>{code}</code>
         </pre>
         <div className="absolute top-3 right-3 flex space-x-2">
