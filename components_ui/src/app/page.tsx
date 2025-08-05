@@ -43,6 +43,18 @@ import RealTimeStatsCard from "@/components/RealTimeStatsCard";
 import LeaderboardStatsCard from "@/components/LeaderboardStatsCard";
 import HealthScoreStatsCard from "@/components/HealthScoreStatsCard";
 import ForecastStatsCard from "@/components/ForecastStatsCard";
+import EngagementStatsCard from "@/components/EngagementStatsCard";
+import InventoryStatsCard from "@/components/InventoryStatsCard";
+import SocialPostCard from "@/components/SocialPostCard";
+import SocialStoryCard from "@/components/SocialStoryCard";
+import SocialProfileSummary from "@/components/SocialProfileSummary";
+import SocialCommentCard from "@/components/SocialCommentCard";
+import SocialPollCard from "@/components/SocialPollCard";
+import SocialEventCard from "@/components/SocialEventCard";
+import PricingCard from "@/components/PricingCard";
+import BlogCard from "@/components/BlogCard";
+import TestimonialCard from "@/components/TestimonialCard";
+import WeatherCard from "@/components/WeatherCard";
 
 const col1Components = [
   { name: "ProfileCard", component: ProfileCard },
@@ -55,6 +67,9 @@ const col1Components = [
   { name: "ComparisonStatsCard", component: ComparisonStatsCard },
   { name: "GeographicStatsCard", component: GeographicStatsCard },
   { name: "ForecastStatsCard", component: ForecastStatsCard },
+  { name: "SocialStoryCard", component: SocialStoryCard },
+  { name: "SocialEventCard", component: SocialEventCard },
+  { name: "WeatherCard", component: WeatherCard },
 ];
 const col2Components = [
   { name: "ProfileStatsCard", component: ProfileStatsCard },
@@ -66,6 +81,9 @@ const col2Components = [
   { name: "ProgressStatsCard", component: ProgressStatsCard },
   { name: "KPIDashboardCard", component: KPIDashboardCard },
   { name: "RealTimeStatsCard", component: RealTimeStatsCard },
+  { name: "EngagementStatsCard", component: EngagementStatsCard },
+  { name: "SocialProfileSummary", component: SocialProfileSummary },
+  { name: "BlogCard", component: BlogCard },
 ];
 const col3Components = [
   { name: "ProfileBadgeCard", component: ProfileBadgeCard },
@@ -77,6 +95,9 @@ const col3Components = [
   { name: "RevenueStatsCard", component: RevenueStatsCard },
   { name: "CircularProgressStats", component: CircularProgressStats },
   { name: "LeaderboardStatsCard", component: LeaderboardStatsCard },
+  { name: "InventoryStatsCard", component: InventoryStatsCard },
+  { name: "SocialCommentCard", component: SocialCommentCard },
+  { name: "PricingCard", component: PricingCard },
 ];
 const col4Components = [
   { name: "CompactProfileCard", component: CompactProfileCard },
@@ -89,6 +110,9 @@ const col4Components = [
   { name: "MultiMetricStatsCard", component: MultiMetricStatsCard },
   { name: "TimeBasedStatsCard", component: TimeBasedStatsCard },
   { name: "HealthScoreStatsCard", component: HealthScoreStatsCard },
+  { name: "SocialPostCard", component: SocialPostCard },
+  { name: "SocialPollCard", component: SocialPollCard },
+  { name: "TestimonialCard", component: TestimonialCard },
 ];
 
 export default function Home() {
@@ -111,7 +135,7 @@ export default function Home() {
           className="text-center text-4xl font-semibold mt-[100px] bg-gradient-to-r 
         from-pink-500 via-purple-500 to-blue-500  bg-clip-text text-transparent"
         >
-          30+ Components
+          50+ Components
         </div>
         <div className="flex gap-2 mt-2">
           <Badge color="black">Badge</Badge>
