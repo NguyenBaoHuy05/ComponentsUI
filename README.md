@@ -11,3 +11,5 @@ Link demo: [ComponentsUI](https://components-ui-sigma.vercel.app/)
 Version 0.0.1: 16 components (08/2025)
 
 Version 0.0.2: 33 components (08/2025)
+
+![alt text](/components_ui/public/image.png)
