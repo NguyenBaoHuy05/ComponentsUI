@@ -55,6 +55,9 @@ import PricingCard from "@/components/PricingCard";
 import BlogCard from "@/components/BlogCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import WeatherCard from "@/components/WeatherCard";
+import NotificationCard from "@/components/NotificationCard";
+import TaskCard from "@/components/TaskCard";
+import LearningSkillCard from "@/components/LearningSkillCard";
 
 const col1Components = [
   { name: "ProfileCard", component: ProfileCard },
@@ -84,6 +87,7 @@ const col2Components = [
   { name: "EngagementStatsCard", component: EngagementStatsCard },
   { name: "SocialProfileSummary", component: SocialProfileSummary },
   { name: "BlogCard", component: BlogCard },
+  { name: "LearningSkillCard", component: LearningSkillCard },
 ];
 const col3Components = [
   { name: "ProfileBadgeCard", component: ProfileBadgeCard },
@@ -98,6 +102,7 @@ const col3Components = [
   { name: "InventoryStatsCard", component: InventoryStatsCard },
   { name: "SocialCommentCard", component: SocialCommentCard },
   { name: "PricingCard", component: PricingCard },
+  { name: "NotificationCard", component: NotificationCard },
 ];
 const col4Components = [
   { name: "CompactProfileCard", component: CompactProfileCard },
@@ -113,6 +118,7 @@ const col4Components = [
   { name: "SocialPostCard", component: SocialPostCard },
   { name: "SocialPollCard", component: SocialPollCard },
   { name: "TestimonialCard", component: TestimonialCard },
+  { name: "TaskCard", component: TaskCard },
 ];
 
 export default function Home() {
